@@ -25,9 +25,14 @@ export const reducer = (state = initialState, action) => {
         console.log("this is a new item", newItem);
         return {
             ...state,
-            car: { ...state.car, features: [...state.car.features, newItem ]  }
+            car: { ...state.car, features: [...state.car.features, newItem]  }
           }
+    case "REMOVE_ITEM":
     
+       return{
+           ...state,
+           car: {...state.car, features: [...state.car.features].length - 1}
+       }
     default:
            return state;
    }
