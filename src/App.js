@@ -20,6 +20,7 @@ const App = (props) => {
   };
 
   const buyItem = item => {
+   
     props.buyItem(item)
   };
 

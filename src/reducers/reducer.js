@@ -28,10 +28,10 @@ export const reducer = (state = initialState, action) => {
             car: { ...state.car, features: [...state.car.features, newItem]  }
           }
     case "REMOVE_ITEM":
-    
+          
        return{
            ...state,
-           car: {...state.car, features: [...state.car.features].length - 1}
+          
        }
     default:
            return state;
