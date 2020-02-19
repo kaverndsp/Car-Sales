@@ -20,7 +20,8 @@ export const reducer = (state = initialState, action) => {
     case "BUY_ITEM":
         const newItem = {
             name: action.payload.name,
-            price: action.payload.price
+            price: action.payload.price,
+            id: action.payload.id
         }
         console.log("this is a new item", newItem);
         return {
@@ -34,8 +35,8 @@ export const reducer = (state = initialState, action) => {
         ...state,
         car: {
           ...state.car,
-          features: state.car.features.filter(car => car.id !== action.payload.id),
-          price: state.car.price - action.payload.prices
+          features: state.car.features.filter(car => car.id != action.payload.id),
+          price: state.car.price - action.payload.price
         }
       
           
